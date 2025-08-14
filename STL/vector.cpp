@@ -1,5 +1,6 @@
 #include<iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int main(){
@@ -40,5 +41,32 @@ int main(){
         cout<<"\n"<<v.at(5);
 
 
+        cout<<endl;
+        for(auto i=v.begin();i!=v.end();i++){
+            cout<<*i<<" ";
+        }
+
+        //* v.rbegin() - reverse beginning
+        //* v.rend() - reverse end
+
+        //! Sorting in vector
+        
+        sort(v.begin(),v.end()); //* Increasing order
+
+        cout<<endl;
+         for(int i=0;i<v.size();i++){
+            cout<<v[i]<<" ";
+        }
+
+        sort(v.begin(),v.end(),greater<int>()); //* decreasing order
+
+        cout<<endl;
+         for(int i=0;i<v.size();i++){
+            cout<<v[i]<<" ";
+        }
+
+        //! Searching in Vector
+
+        
     return 0;
 }
